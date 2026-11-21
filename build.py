@@ -422,6 +422,7 @@ def layout(title, description, content, page_key="home", schema=None):
 <meta property="og:description" content="''' + esc(description) + '''">
 <meta property="og:image" content="/assets/mine.jpg">
 <title>''' + esc(full_title) + '''</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
 <link rel="preload" href="/assets/vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 ''' + schema_json + '''
