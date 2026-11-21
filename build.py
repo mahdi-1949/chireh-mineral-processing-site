@@ -470,7 +470,7 @@ def layout(title, description, content, page_key="home", schema=None):
 ''' + header() + '''
 <main id="main-content">''' + content + '''</main>
 ''' + footer() + '''
-<script src="/assets/site.js?v=menu-20261121" defer></script>
+<script src="/assets/site.js?v=menu-hover-2" defer></script>
 </body>
 </html>'''
 
@@ -1747,10 +1747,12 @@ document.body.classList.add("has-motion");
     var products=nav.querySelector(".nav-products");
     var productSummary=products&&products.querySelector("summary");
     var hoverCloseTimer;
+    var openedByHover=false;
     function setProductsOpen(open){
       if(!products||!productSummary){return;}
       products.open=!!open;
       productSummary.setAttribute("aria-expanded",String(!!open));
+      if(!open){openedByHover=false;}
     }
     if(products&&productSummary){
       products.addEventListener("toggle",function(){
@@ -1759,6 +1761,7 @@ document.body.classList.add("has-motion");
       products.addEventListener("pointerenter",function(){
         if(window.matchMedia("(min-width: 821px) and (hover: hover)").matches){
           window.clearTimeout(hoverCloseTimer);
+          openedByHover=true;
           setProductsOpen(true);
         }
       });
@@ -1774,6 +1777,11 @@ document.body.classList.add("has-motion");
           hoverCloseTimer=window.setTimeout(function(){
             if(!products.matches(":hover")&&!products.contains(document.activeElement)){setProductsOpen(false);}
           },180);
+        }
+      });
+      productSummary.addEventListener("click",function(event){
+        if(openedByHover&&window.matchMedia("(min-width: 821px) and (hover: hover)").matches){
+          event.preventDefault();
         }
       });
       productSummary.addEventListener("keydown",function(event){
