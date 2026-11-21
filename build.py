@@ -534,7 +534,7 @@ def layout(title, description, content, page_key="home", schema=None):
 <title>''' + esc(full_title) + '''</title>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
 <link rel="preload" href="/assets/vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=footer-20261121">
+<link rel="stylesheet" href="/assets/site.css?v=footer-20261121b">
 ''' + schema_json + '''
 </head>
 <body data-page="''' + esc(page_key) + '''">
@@ -1853,7 +1853,7 @@ body.has-motion [data-reveal].is-visible{opacity:1;transform:none}
 .site-footer {
   position: relative;
   overflow: hidden;
-  padding: 36px 0 0;
+  padding: 36px 0 calc(72px + env(safe-area-inset-bottom));
   color: #d8e2ed;
   background:
     radial-gradient(ellipse at 92% 12%, rgba(25, 113, 212, .11), transparent 32%),
