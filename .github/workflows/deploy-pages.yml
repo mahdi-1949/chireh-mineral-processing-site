@@ -1,0 +1,63 @@
+name: Deploy Chireh website to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare the project site path
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          site_base = "/" + os.environ["GITHUB_REPOSITORY"].split("/", 1)[1]
+          quote_root = re.compile(r"""(["'])/(?!/)""")
+          css_root = re.compile(r"""url\((\s*)/(?!/)""")
+
+          for path in Path("dist").rglob("*"):
+              if path.suffix.lower() not in {".html", ".js", ".css"}:
+                  continue
+              text = path.read_text(encoding="utf-8")
+              text = quote_root.sub(lambda match: match.group(1) + site_base + "/", text)
+              text = css_root.sub(lambda match: "url(" + match.group(1) + site_base + "/", text)
+              path.write_text(text, encoding="utf-8")
+
+          Path("dist/.nojekyll").touch()
+          PY
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4
