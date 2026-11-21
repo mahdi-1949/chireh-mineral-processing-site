@@ -429,16 +429,88 @@ def header():
 
 def footer():
     return '''
-    <section class="footer-cta"><div class="container footer-cta-inner">
-      <div><span class="eyebrow eyebrow-light">از نیاز فرآیند شروع کنیم</span><h2>برای انتخاب تجهیز، با ما گفت‌وگو کنید.</h2><p>مشخصات نمونه و هدف آزمون را بگویید تا مسیر بررسی روشن‌تر شود.</p></div>
-      <a class="button button-white" href="/contact/">درخواست مشاوره</a>
-    </div></section>
-    <footer class="site-footer"><div class="container footer-grid">
-      <div class="footer-brand"><a class="brand brand-light" href="/"><span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3 43 14v20L24 45 5 34V14L24 3Z" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M24 3v21m0 0 19-10M24 24 5 14m19 10v21" fill="none" stroke="currentColor" stroke-width="2.3"/></svg></span><span class="brand-copy"><strong>چیره فرآور گستر</strong><small>تجهیزات فرآوری مواد معدنی</small></span></a><p>طراحی و ساخت تجهیزات آزمایشگاهی برای آماده‌سازی نمونه، خردایش، آسیاکنی و جدایش مواد معدنی.</p></div>
-      <div><h2>دسترسی سریع</h2><ul><li><a href="/products/">محصولات</a></li><li><a href="/services/">خدمات</a></li><li><a href="/articles/">دانشنامه</a></li><li><a href="/about/">دربارهٔ شرکت</a></li><li><a href="/faq/">پرسش‌های متداول</a></li><li><a href="/privacy/">حریم خصوصی</a></li></ul></div>
-      <div><h2>دسته‌های تجهیزات</h2><ul><li><a href="/products/?category=crushing">خردایش</a></li><li><a href="/products/?category=grinding">آسیاکنی و پودرکنی</a></li><li><a href="/products/?category=sample">آماده‌سازی نمونه</a></li><li><a href="/products/?category=separation">جدایش مواد معدنی</a></li></ul></div>
-      <div class="footer-contact"><h2>ارتباط با ما</h2><p>تهران، شهرک صنعتی چهاردانگه، خیابان ۱۴، پلاک ۴</p><a href="tel:+982155448318">۰۲۱ ۵۵۴۴ ۸۳۱۸</a><a href="tel:+989006140897">۰۹۰۰ ۶۱۴ ۰۸۹۷</a><a href="mailto:sales@chirehfg.com">sales@chirehfg.com</a><a href="mailto:info@chirehfg.com">info@chirehfg.com</a></div>
-    </div><div class="container footer-bottom"><span>© <span id="current-year">۲۰۲۶</span> چیره فرآور گستر. کلیهٔ حقوق محفوظ است.</span><a href="https://chirehfg.com/" target="_blank" rel="noopener">وب‌سایت شرکت</a></div></footer>
+    <section class="footer-cta" aria-labelledby="footer-cta-title">
+      <div class="container footer-cta-inner">
+        <div class="footer-cta-copy">
+          <span class="footer-cta-kicker"><i aria-hidden="true"></i> مشاورهٔ فنی</span>
+          <h2 id="footer-cta-title">برای انتخاب تجهیز، از نمونه و هدف آزمون شروع کنیم.</h2>
+          <p>نوع نمونه، اندازهٔ خوراک و نتیجهٔ موردنیازتان را با ما در میان بگذارید.</p>
+        </div>
+        <div class="footer-cta-actions">
+          <a class="footer-cta-button" href="/contact/"><span>درخواست مشاوره</span><b aria-hidden="true">←</b></a>
+          <a class="footer-cta-phone" href="tel:+982155448318"><small>تماس مستقیم با دفتر</small><strong>۰۲۱ ۵۵۴۴ ۸۳۱۸</strong></a>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="/" aria-label="چیره فرآور گستر، صفحهٔ اصلی">
+            <span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3 43 14v20L24 45 5 34V14L24 3Z" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M24 3v21m0 0 19-10M24 24 5 14m19 10v21" fill="none" stroke="currentColor" stroke-width="2.3"/></svg></span>
+            <span class="brand-copy"><strong>چیره فرآور گستر</strong><small>مهندسی فرآوری مواد معدنی</small></span>
+          </a>
+          <p>طراحی و ساخت تجهیزات آزمایشگاهی برای آماده‌سازی نمونه، خردایش، آسیاکنی و جدایش مواد معدنی.</p>
+          <div class="footer-brand-note"><i aria-hidden="true"></i><span>از نمونهٔ خام تا دادهٔ قابل اتکا</span></div>
+        </div>
+
+        <nav class="footer-column" aria-label="دسترسی سریع">
+          <h2>دسترسی سریع</h2>
+          <ul>
+            <li><a href="/products/">محصولات</a></li>
+            <li><a href="/services/">خدمات فنی</a></li>
+            <li><a href="/articles/">دانشنامه</a></li>
+            <li><a href="/about/">دربارهٔ شرکت</a></li>
+            <li><a href="/faq/">پرسش‌های متداول</a></li>
+            <li><a href="/contact/">تماس با ما</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-column" aria-label="دسته‌های تجهیزات">
+          <h2>دسته‌های تجهیزات</h2>
+          <ul>
+            <li><a href="/products/?category=sample">آماده‌سازی نمونه</a></li>
+            <li><a href="/products/?category=crushing">خردایش</a></li>
+            <li><a href="/products/?category=grinding">آسیاکنی و پودرکنی</a></li>
+            <li><a href="/products/?category=sizing">دانه‌بندی</a></li>
+            <li><a href="/products/?category=separation">جدایش مواد معدنی</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h2>ارتباط با ما</h2>
+          <p class="footer-address">
+            <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.3"/></svg></span>
+            <span>تهران، شهرک صنعتی چهاردانگه، خیابان ۱۴، پلاک ۴</span>
+          </p>
+          <div class="footer-contact-cards">
+            <a class="footer-contact-card" href="tel:+982155448318">
+              <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.2 3.5h2.6l1.4 4.1-1.8 1.6a14.4 14.4 0 0 0 5.4 5.4l1.6-1.8 4.1 1.4v2.6c0 1-.8 1.8-1.8 1.8A15.2 15.2 0 0 1 5.4 5.3c0-1 .8-1.8 1.8-1.8Z"/></svg></span>
+              <span><small>تلفن دفتر</small><strong>۰۲۱ ۵۵۴۴ ۸۳۱۸</strong></span>
+            </a>
+            <a class="footer-contact-card" href="tel:+989006140897">
+              <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.5 3.5h9A2.5 2.5 0 0 1 19 6v12a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 5 18V6a2.5 2.5 0 0 1 2.5-2.5Z"/><path d="M10 17.5h4"/></svg></span>
+              <span><small>تلفن همراه</small><strong>۰۹۰۰ ۶۱۴ ۰۸۹۷</strong></span>
+            </a>
+            <a class="footer-contact-card" href="mailto:sales@chirehfg.com">
+              <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
+              <span><small>واحد فروش</small><strong>sales@chirehfg.com</strong></span>
+            </a>
+            <a class="footer-contact-card" href="mailto:info@chirehfg.com">
+              <span class="footer-contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
+              <span><small>ایمیل شرکت</small><strong>info@chirehfg.com</strong></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© <span id="current-year">۲۰۲۶</span> چیره فرآور گستر. کلیهٔ حقوق محفوظ است.</span>
+        <div class="footer-bottom-links">
+          <a href="/privacy/">حریم خصوصی</a>
+          <a href="https://chirehfg.com/" target="_blank" rel="noopener">وب‌سایت رسمی شرکت <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
     <a class="floating-call" href="tel:+982155448318" aria-label="تماس با چیره فرآور گستر"><span class="call-symbol" aria-hidden="true">☎</span><span>تماس با ما</span></a>
     '''
 
@@ -462,7 +534,7 @@ def layout(title, description, content, page_key="home", schema=None):
 <title>''' + esc(full_title) + '''</title>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
 <link rel="preload" href="/assets/vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=menu-20261121">
+<link rel="stylesheet" href="/assets/site.css?v=footer-20261121">
 ''' + schema_json + '''
 </head>
 <body data-page="''' + esc(page_key) + '''">
@@ -1726,6 +1798,149 @@ body.has-motion [data-reveal].is-visible{opacity:1;transform:none}
 @media (max-width: 380px) {
   .mega-links { grid-template-columns: 1fr; }
   .mega-category:last-child { grid-column: auto; }
+}
+
+/* Chireh footer: industrial brand system for wide and touch layouts */
+.footer-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 44px 0 0;
+  color: #fff;
+  background: #07172a;
+}
+.footer-cta-inner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+  padding: 28px 34px;
+  border: 1px solid rgba(152, 207, 228, .22);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 8% 115%, rgba(92, 198, 220, .19), transparent 34%),
+    linear-gradient(115deg, #123d65 0%, #102b49 52%, #0d223d 100%);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, .18);
+}
+.footer-cta-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -64px;
+  top: -112px;
+  width: 285px;
+  height: 285px;
+  border: 1px solid rgba(148, 215, 230, .16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px rgba(148, 215, 230, .035), 0 0 0 42px rgba(148, 215, 230, .025);
+}
+.footer-cta-copy { position: relative; z-index: 1; max-width: 690px; }
+.footer-cta-kicker { display: inline-flex; align-items: center; gap: 9px; color: #9de0e7; font-size: 12px; font-weight: 750; }
+.footer-cta-kicker i { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 5px rgba(113, 215, 227, .12); }
+.footer-cta h2 { margin: 10px 0 6px; color: #fff; font-size: clamp(21px, 2.4vw, 28px); line-height: 1.55; }
+.footer-cta p { margin: 0; color: #c3d3e3; font-size: 14px; line-height: 1.8; }
+.footer-cta-actions { position: relative; z-index: 1; flex: 0 0 auto; display: flex; align-items: center; gap: 17px; }
+.footer-cta-button { min-height: 49px; display: inline-flex; align-items: center; justify-content: space-between; gap: 18px; padding: 0 16px; border: 1px solid #3690ec; border-radius: 12px; color: #fff; background: #1971d4; box-shadow: 0 10px 25px rgba(11, 88, 169, .25); font-size: 14px; font-weight: 750; transition: transform .2s, background .2s, box-shadow .2s; white-space: nowrap; }
+.footer-cta-button:hover { color: #fff; background: #2f8ae9; box-shadow: 0 12px 27px rgba(11, 88, 169, .35); transform: translateY(-2px); }
+.footer-cta-button b { font-size: 18px; font-weight: 500; }
+.footer-cta-phone { display: flex; flex-direction: column; gap: 2px; color: #e8f2fa; white-space: nowrap; }
+.footer-cta-phone:hover { color: #9de0e7; }
+.footer-cta-phone small { color: #a9bed2; font-size: 10px; }
+.footer-cta-phone strong { font-size: 14px; letter-spacing: .02em; }
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 36px 0 0;
+  color: #d8e2ed;
+  background:
+    radial-gradient(ellipse at 92% 12%, rgba(25, 113, 212, .11), transparent 32%),
+    #07172a;
+}
+.site-footer::before { content: ""; position: absolute; top: 0; right: max(24px, calc((100% - var(--max)) / 2)); left: max(24px, calc((100% - var(--max)) / 2)); height: 1px; background: linear-gradient(90deg, transparent, rgba(113, 215, 227, .38), transparent); }
+.footer-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(125px, .75fr) minmax(180px, .95fr) minmax(250px, 1.15fr); gap: 34px; padding: 12px 0 34px; }
+.footer-brand .brand { gap: 12px; }
+.footer-brand p { max-width: 330px; margin: 18px 0 14px; color: #aebed0; font-size: 13px; line-height: 1.9; }
+.brand-light .brand-copy strong { color: #fff; }
+.brand-light .brand-copy small { color: #aebed0; }
+.brand-light .brand-mark { color: #7ed7e4; }
+.footer-brand-note { display: inline-flex; align-items: center; gap: 8px; padding: 7px 10px; border: 1px solid rgba(255, 255, 255, .1); border-radius: 999px; color: #b9d8e6; background: rgba(255, 255, 255, .035); font-size: 10px; }
+.footer-brand-note i { width: 6px; height: 6px; border-radius: 50%; background: #71d7e3; box-shadow: 0 0 0 4px rgba(113, 215, 227, .1); }
+.footer-column h2, .footer-contact h2 { display: flex; align-items: center; gap: 9px; margin: 0 0 15px; color: #fff; font-size: 14px; font-weight: 750; }
+.footer-column h2::before, .footer-contact h2::before { content: ""; width: 3px; height: 17px; border-radius: 4px; background: linear-gradient(#71d7e3, #1971d4); }
+.footer-column ul { display: grid; gap: 9px; list-style: none; margin: 0; padding: 0; }
+.footer-column li { margin: 0; }
+.footer-column li a { display: inline-flex; align-items: center; gap: 8px; color: #b7c5d5; font-size: 12px; line-height: 1.65; transition: color .18s, transform .18s; }
+.footer-column li a::before { content: ""; width: 5px; height: 5px; border: 1px solid rgba(113, 215, 227, .55); border-radius: 1px; transform: rotate(45deg); transition: background .18s, border-color .18s; }
+.footer-column li a:hover { color: #8fe0e8; transform: translateX(-2px); }
+.footer-column li a:hover::before { border-color: #71d7e3; background: #71d7e3; }
+.footer-contact { display: block; min-width: 0; }
+.footer-address { display: grid; grid-template-columns: 33px minmax(0, 1fr); align-items: start; gap: 9px; margin: 0 0 12px; color: #b7c5d5; font-size: 11px; line-height: 1.8; }
+.footer-contact-icon { width: 33px; height: 33px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid rgba(146, 192, 217, .18); border-radius: 10px; color: #83d7e3; background: rgba(255, 255, 255, .045); }
+.footer-contact-icon svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.footer-contact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.footer-contact-card { min-width: 0; min-height: 50px; display: grid; grid-template-columns: 31px minmax(0, 1fr); align-items: center; gap: 8px; padding: 7px; border: 1px solid rgba(255, 255, 255, .085); border-radius: 12px; color: #d8e2ed; background: rgba(255, 255, 255, .035); transition: border-color .18s, background .18s, transform .18s; }
+.footer-contact-card:hover { border-color: rgba(113, 215, 227, .4); color: #fff; background: rgba(255, 255, 255, .07); transform: translateY(-1px); }
+.footer-contact-card .footer-contact-icon { width: 31px; height: 31px; border-radius: 9px; }
+.footer-contact-card .footer-contact-icon svg { width: 16px; height: 16px; }
+.footer-contact-card > span:last-child { display: flex; min-width: 0; flex-direction: column; gap: 1px; }
+.footer-contact-card small { color: #8ea4bb; font-size: 9px; line-height: 1.45; }
+.footer-contact-card strong { overflow-wrap: anywhere; color: #d9e7f3; font-size: 10px; line-height: 1.5; font-weight: 650; direction: ltr; text-align: right; }
+.footer-bottom { position: relative; min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid rgba(255, 255, 255, .11); color: #8fa3b9; font-size: 11px; }
+.footer-bottom-links { display: flex; align-items: center; gap: 18px; }
+.footer-bottom-links a { display: inline-flex; align-items: center; gap: 5px; color: #aebed0; transition: color .18s; }
+.footer-bottom-links a:hover { color: #8fe0e8; }
+@media (max-width: 1100px) {
+  .footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: 30px 42px; }
+  .footer-contact-cards { max-width: 430px; }
+}
+@media (max-width: 820px) {
+  .footer-cta { padding-top: 28px; }
+  .footer-cta-inner { display: grid; grid-template-columns: 1fr; gap: 18px; padding: 22px; border-radius: 21px; }
+  .footer-cta h2 { max-width: 35ch; margin-top: 9px; font-size: clamp(19px, 5vw, 24px); }
+  .footer-cta p { font-size: 12px; line-height: 1.8; }
+  .footer-cta-actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); gap: 10px; }
+  .footer-cta-button { min-height: 46px; padding-inline: 12px; font-size: 12px; }
+  .footer-cta-phone { min-height: 46px; justify-content: center; padding-inline: 10px; border: 1px solid rgba(255, 255, 255, .13); border-radius: 12px; background: rgba(255, 255, 255, .04); }
+  .footer-cta-phone strong { font-size: 12px; }
+  .site-footer { padding-top: 25px; padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px 18px; padding-top: 10px; padding-bottom: 27px; }
+  .footer-brand, .footer-contact { grid-column: 1 / -1; }
+  .footer-brand p { max-width: 56ch; font-size: 13px; }
+  .footer-column h2, .footer-contact h2 { margin-bottom: 11px; font-size: 13px; }
+  .footer-column ul { gap: 5px; }
+  .footer-column li a { min-height: 38px; font-size: 12px; }
+  .footer-contact-cards { max-width: none; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .footer-contact-card { min-height: 52px; padding: 7px 8px; }
+  .footer-contact-card strong { font-size: 10px; }
+  .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; padding-block: 16px; font-size: 11px; }
+  .footer-bottom-links { flex-wrap: wrap; gap: 14px; }
+}
+@media (max-width: 560px) {
+  .footer-cta { padding-top: 22px; }
+  .footer-cta-inner { padding: 19px; gap: 15px; }
+  .footer-cta h2 { font-size: clamp(19px, 5.6vw, 23px); }
+  .footer-cta-actions { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .footer-cta-button { min-height: 44px; gap: 8px; padding-inline: 10px; font-size: 11px; }
+  .footer-cta-phone { padding-inline: 8px; }
+  .footer-cta-phone small { font-size: 9px; }
+  .footer-cta-phone strong { font-size: 11px; }
+  .footer-grid { gap: 23px 14px; }
+  .footer-brand p { margin: 14px 0 12px; font-size: 12px; }
+  .footer-brand .brand-copy small { display: block; }
+  .footer-contact-cards { gap: 6px; }
+  .footer-contact-card { grid-template-columns: 28px minmax(0, 1fr); gap: 6px; padding: 6px; }
+  .footer-contact-card .footer-contact-icon { width: 28px; height: 28px; }
+  .footer-contact-card strong { font-size: 9px; }
+  .footer-address { grid-template-columns: 30px minmax(0, 1fr); gap: 8px; font-size: 11px; }
+  .footer-contact-icon { width: 30px; height: 30px; }
+  .footer-bottom { font-size: 10px; }
+}
+@media (max-width: 380px) {
+  .footer-cta-actions { grid-template-columns: 1fr; }
+  .footer-contact-cards { grid-template-columns: 1fr; }
 }
 """
 (ASSETS / "site.css").write_text(CSS, encoding="utf-8")
