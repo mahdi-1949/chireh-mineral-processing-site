@@ -462,7 +462,7 @@ def layout(title, description, content, page_key="home", schema=None):
 <title>''' + esc(full_title) + '''</title>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" sizes="any">
 <link rel="preload" href="/assets/vazirmatn.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=menu-20261121">
 ''' + schema_json + '''
 </head>
 <body data-page="''' + esc(page_key) + '''">
@@ -470,7 +470,7 @@ def layout(title, description, content, page_key="home", schema=None):
 ''' + header() + '''
 <main id="main-content">''' + content + '''</main>
 ''' + footer() + '''
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v=menu-20261121" defer></script>
 </body>
 </html>'''
 
