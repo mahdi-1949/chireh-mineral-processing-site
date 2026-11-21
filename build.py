@@ -368,16 +368,54 @@ def header():
       <nav class="primary-nav" id="primary-nav" aria-label="ناوبری اصلی">
         <a href="/" data-nav="home">خانه</a>
         <details class="nav-products">
-          <summary data-nav="products">محصولات</summary>
-          <div class="mega-menu">
-            <div class="mega-intro"><span class="eyebrow">کاتالوگ تجهیزات</span><strong>از آماده‌سازی نمونه تا جدایش</strong><p>تجهیز مناسب را بر اساس مرحلهٔ فرآیند پیدا کنید.</p><a class="text-link" href="/products/">مشاهدهٔ همهٔ محصولات</a></div>
-            <div class="mega-links">
-              <a href="/products/?category=crushing"><span>خردایش</span><small>سنگ‌شکن‌های فکی و غلتکی</small></a>
-              <a href="/products/?category=grinding"><span>آسیاکنی و پودرکنی</span><small>آسیاب‌های رینگی، گلوله‌ای و شاخص</small></a>
-              <a href="/products/?category=sample"><span>آماده‌سازی نمونه</span><small>تقسیم‌کن‌ها و همزن‌ها</small></a>
-              <a href="/products/?category=sizing"><span>دانه‌بندی</span><small>شیکرهای سرند آزمایشگاهی</small></a>
-              <a href="/products/?category=separation"><span>جدایش مواد معدنی</span><small>تجهیزات ثقلی و فلوتاسیون</small></a>
-            </div>
+          <summary data-nav="products" aria-expanded="false" aria-controls="products-mega">
+            <span>محصولات</span><i class="nav-chevron" aria-hidden="true"></i>
+          </summary>
+          <div class="mega-menu" id="products-mega" role="region" aria-label="دسته‌بندی محصولات">
+            <section class="mega-intro" aria-labelledby="mega-intro-title">
+              <span class="mega-kicker"><i aria-hidden="true"></i>کاتالوگ تجهیزات</span>
+              <h2 id="mega-intro-title">مسیر فرآوری را از مرحلهٔ درست آغاز کنید.</h2>
+              <p>برای هر نمونه و هدف آزمون، دستهٔ تجهیز مناسب را پیدا کنید.</p>
+              <div class="mega-process" aria-label="مراحل فرآوری">
+                <span>آماده‌سازی</span><b aria-hidden="true">←</b><span>خردایش</span><b aria-hidden="true">←</b><span>جدایش</span>
+              </div>
+              <a class="mega-all-link" href="/products/"><span>مشاهدهٔ همهٔ محصولات</span><b aria-hidden="true">←</b></a>
+            </section>
+
+            <section class="mega-categories" aria-labelledby="mega-category-title">
+              <div class="mega-heading">
+                <div><span class="mega-overline">دسته‌بندی تجهیزات</span><h3 id="mega-category-title">در کدام مرحله هستید؟</h3></div>
+                <span class="mega-count">۵ گروه تجهیز</span>
+              </div>
+              <div class="mega-links">
+                <a class="mega-category" href="/products/?category=sample">
+                  <span class="mega-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.8 7.5 4.3 7.5-4.3M12 12.2V21"/></svg></span>
+                  <span class="mega-copy"><strong>آماده‌سازی نمونه</strong><small>تقسیم، همگن‌سازی و آماده‌سازی</small></span><b class="mega-arrow" aria-hidden="true">←</b>
+                </a>
+                <a class="mega-category" href="/products/?category=crushing">
+                  <span class="mega-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m4 17 4.8-7 3.3 4.1 2.7-3.5L20 17H4Z"/><path d="M5 20h14M7 5l3 2-2 2"/></svg></span>
+                  <span class="mega-copy"><strong>خردایش</strong><small>کاهش ابعاد اولیهٔ ماده</small></span><b class="mega-arrow" aria-hidden="true">←</b>
+                </a>
+                <a class="mega-category" href="/products/?category=grinding">
+                  <span class="mega-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5"/><path d="M8 14.5 14.5 8 17 10.5 10.5 17 8 14.5Z"/><path d="m7 7 2 2m7 7 1 1"/></svg></span>
+                  <span class="mega-copy"><strong>آسیاکنی و پودرکنی</strong><small>نرمایش و آماده‌سازی برای آزمون</small></span><b class="mega-arrow" aria-hidden="true">←</b>
+                </a>
+                <a class="mega-category" href="/products/?category=sizing">
+                  <span class="mega-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M6 10h12M8 14h8M10 18h4"/><path d="M6 4v4m12-4v4"/></svg></span>
+                  <span class="mega-copy"><strong>دانه‌بندی</strong><small>سرند و کنترل توزیع اندازه</small></span><b class="mega-arrow" aria-hidden="true">←</b>
+                </a>
+                <a class="mega-category" href="/products/?category=separation">
+                  <span class="mega-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7c2.1-2 4.1-2 6.2 0s4.1 2 6.2 0S20.5 5 22 6"/><path d="M4 12c2.1-2 4.1-2 6.2 0s4.1 2 6.2 0 4.1-2 5.6-1"/><path d="M4 17c2.1-2 4.1-2 6.2 0s4.1 2 6.2 0 4.1-2 5.6-1"/></svg></span>
+                  <span class="mega-copy"><strong>جدایش مواد معدنی</strong><small>بررسی و بازیابی کانی‌های ارزشمند</small></span><b class="mega-arrow" aria-hidden="true">←</b>
+                </a>
+              </div>
+            </section>
+
+            <a class="mega-feature" href="/products/crp-600/" aria-label="مشاهدهٔ مشخصات آسیاب رینگی پنوماتیکی آزمایشگاهی CRP-600">
+              <span class="mega-feature-tag">محصول منتخب</span>
+              <span class="mega-feature-art"><img src="/assets/product_laboratory-pneumatic-ring-mill-crp-600.webp" alt="" loading="lazy"><span class="mega-feature-badge">۶ هاون مستقل</span></span>
+              <span class="mega-feature-copy"><small>آسیاب رینگی پنوماتیکی</small><strong>CRP-600</strong><em>مشاهدهٔ مشخصات <b aria-hidden="true">←</b></em></span>
+            </a>
           </div>
         </details>
         <a href="/services/" data-nav="services">خدمات</a>
@@ -1525,6 +1563,170 @@ body.has-motion [data-reveal].is-visible{opacity:1;transform:none}
   .spec-table td { padding: 9px 7px; }
   .footer-grid { column-gap: 10px; }
 }
+
+/* Product mega menu: spacious desktop panel and touch-first mobile layout */
+.header-inner { position: relative; }
+.nav-products { position: static; }
+.nav-products > summary { gap: 8px; }
+.nav-products > summary::after {
+  content: "";
+  width: auto;
+  height: 2px;
+  margin: 0;
+  border: 0;
+  position: absolute;
+  right: 0;
+  left: 100%;
+  bottom: 20px;
+  background: var(--blue);
+  transform: none;
+  transition: left .25s ease;
+}
+.nav-products > summary:hover::after,
+.nav-products[open] > summary::after { left: 0; }
+.nav-chevron {
+  width: 7px;
+  height: 7px;
+  border-inline-start: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  margin-top: -4px;
+  transition: transform .2s ease, margin .2s ease;
+}
+.nav-products[open] > summary .nav-chevron { transform: rotate(135deg); margin-top: 4px; }
+.mega-menu {
+  position: absolute;
+  z-index: 100;
+  top: calc(100% + 9px);
+  right: 0;
+  left: 0;
+  width: min(1160px, calc(100vw - 48px));
+  margin-inline: auto;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: minmax(210px, .82fr) minmax(420px, 1.55fr) minmax(210px, .82fr);
+  gap: 12px;
+  border: 1px solid #dce7f2;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 28px 78px rgba(8, 27, 52, .2);
+  animation: mega-menu-in .2s ease both;
+}
+@keyframes mega-menu-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mega-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100%;
+  padding: 21px;
+  border-radius: 19px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 8% 92%, rgba(94, 203, 220, .2), transparent 38%),
+    linear-gradient(145deg, #0b1c34 0%, #133b63 100%);
+}
+.mega-intro::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -54px;
+  bottom: -82px;
+  width: 188px;
+  height: 188px;
+  border: 1px solid rgba(151, 220, 231, .24);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(151, 220, 231, .035), 0 0 0 37px rgba(151, 220, 231, .03);
+}
+.mega-kicker { display: inline-flex; align-items: center; gap: 8px; color: #a7dce4; font-size: 12px; font-weight: 700; }
+.mega-kicker i { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 5px rgba(113, 215, 227, .12); }
+.mega-intro h2 { max-width: 300px; margin: 15px 0 8px; color: #fff; font-size: 20px; line-height: 1.65; font-weight: 800; }
+.mega-intro p { margin: 0; color: #c7d7e7; font-size: 13px; line-height: 1.9; }
+.mega-process { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; margin-top: 17px; color: #9fb8d0; font-size: 10px; }
+.mega-process span { padding: 5px 8px; border: 1px solid rgba(210, 229, 243, .17); border-radius: 999px; color: #e6f1f9; background: rgba(255, 255, 255, .055); }
+.mega-process b { font-size: 11px; font-weight: 500; color: var(--cyan); }
+.mega-all-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 19px; padding: 10px 12px; border-radius: 11px; color: #fff; background: #1971d4; font-size: 12px; font-weight: 700; transition: background .2s, transform .2s; }
+.mega-all-link:hover { color: #fff; background: #2f8ae9; transform: translateY(-1px); }
+.mega-all-link b { font-size: 17px; font-weight: 500; line-height: 1; }
+.mega-categories { min-width: 0; padding: 15px; border: 1px solid #e7edf4; border-radius: 19px; background: #f8fafd; }
+.mega-heading { display: flex; align-items: end; justify-content: space-between; gap: 10px; margin: 0 1px 12px; }
+.mega-overline { color: #718197; font-size: 11px; font-weight: 700; }
+.mega-heading h3 { margin: 3px 0 0; color: var(--navy); font-size: 17px; line-height: 1.5; }
+.mega-count { flex: 0 0 auto; padding: 5px 9px; border: 1px solid #e2eaf3; border-radius: 999px; color: #60758c; background: #fff; font-size: 10px; }
+.mega-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+.mega-category { min-width: 0; min-height: 66px; display: grid; grid-template-columns: 38px minmax(0, 1fr) 12px; align-items: center; gap: 9px; padding: 8px 9px; border: 1px solid transparent; border-radius: 14px; color: var(--ink); background: #fff; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.mega-category:hover { border-color: #d5e5f5; color: var(--ink); box-shadow: 0 8px 20px rgba(19, 51, 83, .07); transform: translateY(-1px); }
+.mega-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: #1971d4; background: #eaf3ff; }
+.mega-category:nth-child(2) .mega-icon { color: #bc6a25; background: #fff1e5; }
+.mega-category:nth-child(3) .mega-icon { color: #167f83; background: #e5f7f5; }
+.mega-category:nth-child(4) .mega-icon { color: #7356bf; background: #f0ecff; }
+.mega-category:nth-child(5) .mega-icon { color: #14729a; background: #e7f5fb; }
+.mega-icon svg { width: 21px; height: 21px; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.mega-copy { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.mega-copy strong { overflow: hidden; color: #17324e; font-size: 12px; line-height: 1.55; text-overflow: ellipsis; white-space: nowrap; }
+.mega-copy small { overflow: hidden; color: #75869a; font-size: 10px; line-height: 1.5; text-overflow: ellipsis; white-space: nowrap; }
+.mega-arrow { color: #9aabbd; font-size: 14px; font-weight: 400; transition: color .2s, transform .2s; }
+.mega-category:hover .mega-arrow { color: var(--blue); transform: translateX(-2px); }
+.mega-category:last-child { grid-column: 1 / -1; }
+.mega-feature { position: relative; min-width: 0; min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 14px; border: 1px solid #dcecf2; border-radius: 19px; color: var(--ink); background: linear-gradient(155deg, #f3f8ff 0%, #edf8f8 100%); transition: border-color .2s, box-shadow .2s, transform .2s; }
+.mega-feature::before { content: ""; position: absolute; width: 180px; height: 180px; top: 42px; right: 50%; transform: translateX(50%); border-radius: 50%; background: radial-gradient(circle, rgba(114, 189, 222, .2), rgba(114, 189, 222, 0) 68%); pointer-events: none; }
+.mega-feature:hover { border-color: #b7d8e8; color: var(--ink); box-shadow: 0 10px 26px rgba(19, 51, 83, .09); transform: translateY(-1px); }
+.mega-feature-tag { align-self: flex-start; z-index: 1; padding: 5px 9px; border: 1px solid #dbe8f2; border-radius: 999px; color: #54718c; background: rgba(255,255,255,.8); font-size: 10px; font-weight: 700; }
+.mega-feature-art { position: relative; z-index: 1; min-height: 132px; display: grid; place-items: center; }
+.mega-feature-art img { width: 100%; height: 132px; object-fit: contain; filter: drop-shadow(0 12px 9px rgba(20, 48, 73, .12)); }
+.mega-feature-badge { position: absolute; left: 0; bottom: 5px; padding: 5px 8px; border: 1px solid #dbe8f2; border-radius: 999px; color: #34516e; background: rgba(255,255,255,.92); font-size: 10px; }
+.mega-feature-copy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; }
+.mega-feature-copy small { color: #718197; font-size: 10px; }
+.mega-feature-copy strong { margin-top: 1px; color: #102945; font-size: 22px; letter-spacing: .02em; }
+.mega-feature-copy em { display: flex; align-items: center; gap: 5px; margin-top: 5px; color: var(--blue); font-size: 11px; font-style: normal; font-weight: 700; }
+.mega-feature-copy em b { font-size: 14px; font-weight: 500; }
+@media (min-width: 821px) and (max-width: 1050px) {
+  .mega-menu { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); width: min(940px, calc(100vw - 36px)); }
+  .mega-feature { grid-column: 1 / -1; min-height: 105px; display: grid; grid-template-columns: 140px minmax(0, 1fr); align-items: center; }
+  .mega-feature-art { grid-column: 1; grid-row: 1 / span 2; min-height: 70px; }
+  .mega-feature-art img { height: 78px; }
+  .mega-feature-copy { grid-column: 2; grid-row: 1 / span 2; }
+  .mega-feature-tag { position: absolute; top: 10px; left: 10px; }
+}
+@media (max-width: 820px) {
+  .header-inner { position: relative; }
+  .nav-products { position: static; }
+  .nav-products > summary { justify-content: space-between; }
+  .primary-nav > a::after,
+  .nav-products > summary::after { display: none; }
+  .mega-menu { position: static; width: auto; margin: 3px 0 7px; padding: 10px; grid-template-columns: 1fr; gap: 9px; border: 1px solid #dce7f2; border-radius: 18px; box-shadow: none; animation: none; }
+  .mega-intro { min-height: 0; padding: 14px; border-radius: 15px; }
+  .mega-intro h2 { max-width: none; margin: 8px 0 5px; font-size: 17px; line-height: 1.55; }
+  .mega-intro p { font-size: 12px; }
+  .mega-process { display: none; }
+  .mega-all-link { margin-top: 11px; padding: 8px 10px; }
+  .mega-categories { padding: 10px; border: 0; background: transparent; }
+  .mega-heading { margin: 0 1px 8px; }
+  .mega-heading h3 { font-size: 14px; }
+  .mega-overline { font-size: 10px; }
+  .mega-count { padding: 4px 7px; font-size: 9px; }
+  .mega-links { gap: 6px; }
+  .mega-category { min-height: 67px; grid-template-columns: 32px minmax(0, 1fr) 10px; gap: 6px; padding: 7px; border-color: #edf1f6; border-radius: 12px; }
+  .mega-icon { width: 32px; height: 32px; border-radius: 10px; }
+  .mega-icon svg { width: 18px; height: 18px; }
+  .mega-copy strong { font-size: 11px; white-space: normal; }
+  .mega-copy small { font-size: 9px; white-space: normal; }
+  .mega-feature { min-height: 94px; display: grid; grid-template-columns: 82px minmax(0,1fr); align-items: center; gap: 8px; padding: 10px; border-radius: 15px; }
+  .mega-feature-art { grid-column: 1; grid-row: 1; min-height: 70px; }
+  .mega-feature-art img { height: 70px; }
+  .mega-feature-badge { left: 0; bottom: -4px; padding: 3px 5px; font-size: 8px; }
+  .mega-feature-copy { grid-column: 2; grid-row: 1; }
+  .mega-feature-copy small { font-size: 9px; }
+  .mega-feature-copy strong { font-size: 18px; }
+  .mega-feature-copy em { margin-top: 2px; font-size: 10px; }
+  .mega-feature-tag { position: absolute; top: 7px; left: 8px; padding: 3px 6px; font-size: 8px; }
+}
+@media (max-width: 380px) {
+  .mega-links { grid-template-columns: 1fr; }
+  .mega-category:last-child { grid-column: auto; }
+}
 """
 (ASSETS / "site.css").write_text(CSS, encoding="utf-8")
 
@@ -1542,18 +1744,78 @@ document.body.classList.add("has-motion");
       nav.classList.toggle("is-open",!open);
       toggle.setAttribute("aria-label",open?"بازکردن فهرست":"بستن فهرست");
     });
+    var products=nav.querySelector(".nav-products");
+    var productSummary=products&&products.querySelector("summary");
+    var hoverCloseTimer;
+    function setProductsOpen(open){
+      if(!products||!productSummary){return;}
+      products.open=!!open;
+      productSummary.setAttribute("aria-expanded",String(!!open));
+    }
+    if(products&&productSummary){
+      products.addEventListener("toggle",function(){
+        productSummary.setAttribute("aria-expanded",String(products.open));
+      });
+      products.addEventListener("pointerenter",function(){
+        if(window.matchMedia("(min-width: 821px) and (hover: hover)").matches){
+          window.clearTimeout(hoverCloseTimer);
+          setProductsOpen(true);
+        }
+      });
+      products.addEventListener("pointerleave",function(){
+        if(window.matchMedia("(min-width: 821px) and (hover: hover)").matches){
+          hoverCloseTimer=window.setTimeout(function(){
+            if(!products.matches(":hover")&&!products.contains(document.activeElement)){setProductsOpen(false);}
+          },180);
+        }
+      });
+      products.addEventListener("focusout",function(event){
+        if(window.matchMedia("(min-width: 821px)").matches&&!products.contains(event.relatedTarget)){
+          hoverCloseTimer=window.setTimeout(function(){
+            if(!products.matches(":hover")&&!products.contains(document.activeElement)){setProductsOpen(false);}
+          },180);
+        }
+      });
+      productSummary.addEventListener("keydown",function(event){
+        if(event.key==="ArrowDown"){
+          event.preventDefault();
+          setProductsOpen(true);
+          var firstProductLink=products.querySelector(".mega-links a");
+          if(firstProductLink){firstProductLink.focus();}
+        }
+      });
+    }
+    document.addEventListener("pointerdown",function(event){
+      if(!nav.contains(event.target)&&!toggle.contains(event.target)){
+        if(products){setProductsOpen(false);}
+        if(nav.classList.contains("is-open")){
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded","false");
+          toggle.setAttribute("aria-label","بازکردن فهرست");
+        }
+      }
+    });
     nav.querySelectorAll("a").forEach(function(link){
       link.addEventListener("click",function(){
         nav.classList.remove("is-open");
         toggle.setAttribute("aria-expanded","false");
         toggle.setAttribute("aria-label","بازکردن فهرست");
+        if(products){setProductsOpen(false);}
       });
     });
     document.addEventListener("keydown",function(event){
       if(event.key==="Escape"){
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded","false");
-        document.querySelectorAll(".nav-products[open]").forEach(function(el){el.removeAttribute("open");});
+        var wasMobile=window.matchMedia("(max-width: 820px)").matches;
+        var menuWasOpen=nav.classList.contains("is-open");
+        var productsWereOpen=products&&products.open;
+        if(products){setProductsOpen(false);}
+        if(menuWasOpen){
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded","false");
+          toggle.setAttribute("aria-label","بازکردن فهرست");
+        }
+        if(wasMobile&&menuWasOpen){toggle.focus();}
+        else if(productsWereOpen&&productSummary){productSummary.focus();}
       }
     });
   }
