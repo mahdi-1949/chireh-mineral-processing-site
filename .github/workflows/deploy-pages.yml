@@ -26,6 +26,9 @@ jobs:
         with:
           ref: main
 
+      - name: Build the static site
+        run: python build.py
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
